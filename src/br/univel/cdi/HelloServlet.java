@@ -2,6 +2,8 @@ package br.univel.cdi;
 
 import java.io.IOException;
 
+//import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class HelloWorld
  */
 @WebServlet("/HelloWorld")
+@SessionScoped
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@Inject private HelloWorld hello;
